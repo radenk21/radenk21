@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Portfolio</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css">    
+    <!-- unicons cdn -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon/android-chrome-512x512.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container">
+        <nav id="navbar-header">
+            <div class="nav-logo">
+                <p class="nav-name">Raden</p>
+                <span>.</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-menu-list">
+                    <li class="nav-list">
+                        <a href="#home" class="nav-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#about" class="nav-link">About</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn">Download CV <i class="uil uil-file"></i></button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="menuFunction()"></i>
+            </div>
+        </nav>
+        
+        <main class="wrapper">
+            <section class="featured-box" id="home">
+                <div class="featured-text">
+                    <div class="featured-text-card">
+                        <span>R. Khairu Wahyutama</span>
+                    </div>
+                    <div class="featured-name">
+                        <p>I'm <span class="typedText">Web Developer</span></p>
+                    </div>
+                    <div class="featured-text-info">
+                        <p>Experienced frontend developer with a passion for user-friendly websites.</p>
+                    </div>
+                    <div class="featured-text-btn">
+                        <button class="btn blue-btn">Hire Me</button>
+                        <button class="btn">Download CV <i class="uil uil-file-download-alt"></i></button>
+                    </div>
+                    <div class="social-icons">
+                        <div class="icon"><i class="uil uil-instagram"></i></div>
+                        <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+                        <div class="icon"><i class="uil uil-github-alt"></i></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- main js -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
