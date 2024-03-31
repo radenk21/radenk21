@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloning Kampus Merdeka</title>
+    <!-- tailwind css link -->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <style>
+        .slide-in-top{animation:slide-in-top .3s cubic-bezier(.25,.46,.45,.94) both}
+        @keyframes slide-in-top{0%{transform:translateY(-1000px);opacity:0}100%{transform:translateY(0);opacity:1}}
+        .slide-out-top{animation:slide-out-top .3s cubic-bezier(.55,.085,.68,.53) both}
+        @keyframes slide-out-top{0%{transform:translateY(0);opacity:1}100%{transform:translateY(-1000px);opacity:0}}
+    </style>
+</head>
+<body class="font-jakarta bg-[#F8F8F8]">
+    <!-- header nav start -->
+    <header class="flex lg:justify-around justify-between lg:mx-0 w-full lg:py-4 py-4 px-3 lg:bg-black bg-[#1E1F1F]">
+        <div class="nav-logo flex gap-2">
+            <img src="./src/img/logo-pendidikan.92aef756.webp" class="object-contain" alt="Tut wuri handayani logo" />
+            <img src="./src/img/logo-white.mobile.a520c1cb.webp" class="object-contain" alt="Kampus Merdeka Logo">
+        </div>
+        <ul class="text-white font-bold text-base gap-12 place-items-center hidden lg:flex">
+            <a href="#">Beranda</a>
+            <a href="#">Program</a>
+            <a href="#">Butuh Bantuan?</a>
+            <a href="#" class="bg-white font-semibold text-sm text-black flex place-items-center gap-4 px-4 py-3 rounded-full">
+                <ion-icon name="person" class="text-[#a0a4a8]"></ion-icon>
+                <p class="font-bold">Masuk ke Akun</p>
+            </a>
+        </ul>
+        <button id="hamburger-menu" onclick="toggleMenu()" class="lg:hidden flex items-center text-3xl text-white">
+            <ion-icon name="menu-outline"></ion-icon>
+        </button>
+    </header>
+    <!-- header nav end -->
+
+    <!-- navbar start -->
+    <nav class="w-full lg:flex hidden justify-center">
+        <ul class="font-bold flex">
+            <li class="nav-box"><a href="" class="w-16 xl:w-32 me-3">Kampus Mengajar</a> <ion-icon name="chevron-down"></ion-icon></li>
+            <li class="nav-box"><a href="" class="w-16 lg:w-36 me-3">Magang MSIB</a> <ion-icon name="chevron-down"></ion-icon></li>
+            <li class="nav-box"><a href="" class="w-16 lg:w-36 me-3">Studi Independen Bersertifikat</a> <ion-icon name="chevron-down"></ion-icon></li>
+            <li class="nav-box"><a href="" class="w-16 lg:w-40 me-3">Pertukaran Mahasiswa Merdeka</a> <ion-icon name="chevron-down"></ion-icon></li>
+            <li class="nav-box"><a href="" class="w-16 lg:w-36 me-3">Program dan Kegiatan Lainnya</a></li>
+        </ul>
+    </nav>
+    <!-- navbar end -->
+    <!-- main section start -->
+    <main class="flex flex-col items-center lg:mt-14 mt-10 w-full ">
+        <div class="main-section">
+            <h1 class="article-header">Program Kampus Merdeka</h1>
+            <article class="mt-6 flex flex-wrap gap-4">
+            <!-- <article class="mt-6 grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-4 self-center"> -->
+                <!-- card kampus mengajar start -->
+                <div class="card">
+                    <div class="card-box mb-4">
+                        <div class="card-img">
+                            <img src="./src/img/kampus-mengajar-logo.4cb4b8b5.webp" alt="Kampus Mengajar">
+                        </div>
+                        <h2 class="card-title">Kampus Mengajar</h2>
+                        <p class="card-text">Bantu peningkatan kualitas pendidikan dasar dengan terlibat langsung pada proses pengajaran di sekolah-sekolah yang berlokasi di seluruh daerah di Indonesia.</p>
+                        <!-- <p class="card-button">Cari Posisi</p> -->
+                    </div>
+                    <div class="card-bottom">
+                        <hr class="2xl:mr-20 xl:mr-20 lg:mr-20">
+                        <div class="card-action">
+                            <p>Tentang Program</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                        <div class="card-action border-t">
+                            <p>Syarat dan Ketentuan</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <!-- card kampus mengajar end -->
+
+                <!-- card magang msib start -->
+                <div class="card">
+                    <div class="card-box mb-4">
+                        <div class="card-img">
+                            <img src="./src/img/msib-logo.8402a51e.webp" alt="Magang MSIB">
+                        </div>
+                        <h2 class="card-title">Magang Merdeka</h2>
+                        <p class="card-text">Dapatkan pengalaman dunia kerja secara langsung sebagai persiapan kariermu.</p>
+                        <p class="card-button">Cari Posisi Magang</p>
+                    </div>
+                    <div class="card-bottom">
+                        <hr class="2xl:hidden xl:hidden lg:hidden">
+                        <div class="card-action">
+                            <p>Tentang Program</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                        <div class="card-action border-t">
+                            <p>Syarat dan Ketentuan</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <!-- card magang msib end -->
+
+                <!-- card studi independen start -->
+                <div class="card">
+                    <div class="card-box mb-4">
+                        <div class="card-img">
+                            <img src="./src/img/msib-logo.8402a51e (1).webp" alt="Studi Independen">
+                        </div>
+                        <h2 class="card-title">Studi Independen</h2>
+                        <p class="card-text">Jalankan proyek penelitian dengan studi kasus nyata dari para pelaku industri ternama.</p>
+                        <p class="card-button">Cari Kelas Studi Independen</p>
+                    </div>
+                    <div class="card-bottom">
+                        <!-- <hr class="2xl:mr-20 xl:mr-20 lg:mr-20"> -->
+                        <div class="card-action">
+                            <p>Tentang Program</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                        <div class="card-action border-t">
+                            <p>Syarat dan Ketentuan</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <!-- card studi independen end -->
+
+                <!-- card pertukaran mahasiswa start -->
+                <div class="card">
+                    <div class="card-box mb-4">
+                        <div class="card-img">
+                            <img src="./src/img/pmm-logo.02f2aceb.webp" alt="Pertukaran Mahasiswa Merdeka">
+                        </div>
+                        <h2 class="card-title">Pertukaran Mahasiswa Merdeka</h2>
+                        <p class="card-text">Program pertukaran mahasiswa dalam negeri yang memberikan pengalaman langsung untuk lebih memaknai keberagaman budaya nusantara.</p>
+                        <!-- <p class="card-button">Cari Posisi Magang</p> -->
+                    </div>
+                    <div class="card-bottom">
+                        <hr class="2xl:mr-20 xl:mr-20 lg:mr-20">
+                        <div class="card-action">
+                            <p>Tentang Program</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                        <div class="card-action border-t">
+                            <p>Syarat dan Ketentuan</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <!-- card pertukaran mahasiswa end -->
+
+                <!-- card wirausaha merdeka start -->
+                <div class="card">
+                    <div class="card-box mb-4">
+                        <div class="card-img">
+                            <img src="./src/img/wmk-logo.8e10d0f7.webp" alt="Wirausaha Merdeka">
+                        </div>
+                        <h2 class="card-title">Wirausaha Merdeka</h2>
+                        <p class="card-text">Ikuti program unggulan dari berbagai Perguruan Tinggi yang bertujuan untuk meningkatkan kemampuan wirausaha.</p>
+                        <!-- <p class="card-button">Cari Posisi Magang</p> -->
+                    </div>
+                    <div class="card-bottom">
+                        <hr class="2xl:mr-20 xl:mr-20 lg:mr-20">
+                        <div class="card-action border-t">
+                            <p>Tentang Program</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                        <!-- <div class="card-action border-t">
+                            <p>Syarat dan Ketentuan</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- card wirausaha merdeka end -->
+
+                <!-- card iisma start -->
+                <div class="card">
+                    <div class="card-box mb-4">
+                        <div class="card-img">
+                            <img src="./src/img/iisma-logo.0971cb16.webp" alt="Indonesian International Student Mobility Awards">
+                        </div>
+                        <h2 class="card-title">Indonesian International Student Mobility Awards</h2>
+                        <p class="card-text">Program pertukaran dengan universitas lain dari seluruh dunia untuk bertukar budaya.</p>
+                        <!-- <p class="card-button">Cari Posisi Magang</p> -->
+                    </div>
+                    <div class="card-bottom">
+                        <hr class="2xl:mr-20 xl:mr-20 lg:mr-20">
+                        <div class="card-action">
+                            <p>Tentang Program</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                        <div class="card-action border-t">
+                            <p>Syarat dan Ketentuan</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <!-- card iisma end -->
+
+                <!-- card praktisi mengajar start -->
+                <div class="card">
+                    <div class="card-box mb-4">
+                        <div class="card-img">
+                            <img src="./src/img/praktisi-mengajar-logo.f46e6623.webp" alt="Praktisi Mengajar">
+                        </div>
+                        <h2 class="card-title">Praktisi Mengajar</h2>
+                        <p class="card-text">Ruang kolaborasi antara Praktisi sebagai representasi industri dengan dosen Perguruan Tinggi dalam bentuk pengajaran mata kuliah agar mahasiswa lebih siap untuk masuk ke dunia kerja.</p>
+                        <!-- <p class="card-button">Cari Posisi Magang</p> -->
+                    </div>
+                    <div class="card-bottom">
+                        <!-- <hr class="2xl:mr-20 xl:mr-20 lg:mr-20"> -->
+                        <div class="card-action border-t">
+                            <p>Tentang Program</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                        <!-- <div class="card-action border-t">
+                            <p>Syarat dan Ketentuan</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- card praktisi mengajar end -->
+            </article>
+        </div>
+        <div class="main-section gap-8 py-16">
+            <hr class="lg:m-4 m-3">
+            <h1 class="article-header">Kegiatan Lainnya</h1>
+            <article class="flex flex-wrap">
+                <div class="card">
+                    <div class="card-box mb-4">
+                        <div class="card-img">
+                            <img src="./src/img/logo-mandiri.4e08d727.webp" alt="Magang Mandiri ">
+                        </div>
+                        <h2 class="card-title">Magang Mandiri </h2>
+                        <p class="card-text">Temukan pengalaman dunia kerja yang dikelola langsung oleh perusahaan tanpa ada batasan kuota dan jadwal yang lebih fleksibel.</p>
+                        <p class="card-button">Cari Posisi Magang</p>
+                    </div>
+                    <div class="card-bottom">
+                        <!-- <hr class="2xl:mr-20 xl:mr-20 lg:mr-20"> -->
+                        <div class="card-action">
+                            <p>Tentang Kegiatan</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div>
+                        <!-- <div class="card-action border-t">
+                            <p>Syarat dan Ketentuan</p>
+                            <ion-icon name="arrow-forward" class="text-[#0087C8] text-xl"></ion-icon>
+                        </div> -->
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+    <!-- main section end -->
+
+    <!-- desktop footer start -->
+    <footer class="bg-black w-full hidden lg:block">
+        <div class="pt-20 pb-40 flex justify-center items-center">
+            <div class="max-w-7xl">
+                <section class="text-white grid gap-4 grid-flow-col auto-cols-max w-full">
+                    <div>
+                        <img class="w-[120px] h-[120px]"  src="src/img/logo-kemendikbud.ae86719b.webp" alt="Tut Wuri Handayani">
+                    </div>
+                    <div class="2xl:w-[474px] xl:w-[474px] lg:w-full col-start-2 row-start-1">
+                        <h5 class="footer-title w-64 lg:w-96">Direktorat Jenderal Pendidikan Tinggi, Riset, dan Teknologi (Diktiristek)</h5>
+                        <div class="footer-detail mt-12">
+                            <p>marketing@kampusmerdeka.co</p>
+                            <p>Jl. Jenderal Sudirman, Senayan Jakarta 10270</p>
+                        </div>
+                    </div>
+                    <div class="col-start-3 row-start-1 grid grid-cols-2">
+                        <div>
+                            <h5 class="footer-title">Navigasi</h5>
+                            <div class="footer-detail">
+                                <a href="#">Beranda</a>
+                                <a href="#">Tentang Kami</a>
+                                <a href="#">Berita</a>
+                                <a href="#">Pengumuman</a>
+                                <a href="#">FAQ</a>
+                                <a href="#">Program</a>
+                                <a href="#">Daftar</a>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="footer-title">Tautan Eksternal</h5>
+                            <div class="footer-detail">
+                                <a href="">Mitra Kampus Merdeka</a>    
+                            </div>
+                        </div>
+                    </div>
+                    <span class="col-start-2 row-start-2 gap-4 flex text-2xl">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                        <ion-icon name="logo-youtube"></ion-icon>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                        <ion-icon name="globe"></ion-icon>
+                    </span>
+                    <span class="col-start-3 row-start-2 text-md lg:text-[14px]">
+                        <p>Hak Cipta 2022 Kementerian Pendidikan dan Kebudayaan RI</p>
+                        <p>Foto oleh ITS, ITERA, and UI</p>
+                    </span>
+                </section>
+            </div>
+        </div>
+    </footer>
+    <!-- desktop footer end -->
+
+    <!-- mobile footer start -->
+    <footer class="bg-white border lg:hidden flex flex-row w-full justify-around py-2 fixed bottom-0">
+        <a href="#" class="footer-nav-button">
+            <ion-icon class="foo-logo-btn" name="home"></ion-icon>
+            <p class="foo-text-btn">
+                Beranda
+            </p>
+        </a>
+        <a href="#" class="footer-nav-button font-bold">
+            <ion-icon class="foo-logo-btn text-[#F66951]" name="briefcase"></ion-icon>
+            <p class="foo-text-btn text-black">
+                Program
+            </p>
+        </a>
+        <a href="#" class="footer-nav-button">
+            <ion-icon class="foo-logo-btn" name="help-circle-outline"></ion-icon>
+            <p class="foo-text-btn">
+                FAQ
+            </p>
+        </a>
+        <a href="#" class="footer-nav-button">
+            <ion-icon class="foo-logo-btn" name="person"></ion-icon>
+            <p class="foo-text-btn">
+                Masuk
+            </p>
+        </a>
+    </footer>
+    <!-- mobile footer end -->
+    
+    <!-- toogle menu start -->
+    <div id="toggle-menu" class="hidden fixed top-0 left-0 h-screen w-full bg-[rgb(0,0,0,0.6)]">
+        <div id="hidden-menu" class="w-full bg-white min-h-[50%] p-4 flex flex-col gap-6 top-0 fixed">
+            <div class="flex justify-end">
+                <button id="close-button" onclick="toggleMenu()">
+                    <ion-icon class="text-2xl" name="close"></ion-icon>
+                </button>
+            </div>
+            <div class="text-xs text-[#979b9f]">Program Kampus Merdeka</div>
+            <a href="#" class="link-toogle-menu">
+                <p class="text-sm font-bold">Kampus Mengajar</p>
+                <ion-icon name="arrow-forward"></ion-icon>
+            </a>
+            <a href="#" class="link-toogle-menu">
+                <p class="text-sm font-bold">Magang MSIB</p>
+                <ion-icon name="arrow-forward"></ion-icon>
+            </a>
+            <a href="#" class="link-toogle-menu">
+                <p class="text-sm font-bold">Studi Independen Bersertifikat</p>
+                <ion-icon name="arrow-forward"></ion-icon>
+            </a>
+            <a href="#" class="link-toogle-menu">
+                <p class="text-sm font-bold">Pertukaran Mahasiswa Merdeka</p>
+                <ion-icon name="arrow-forward"></ion-icon>
+            </a>
+            <a href="#" class="link-toogle-menu">
+                <p class="text-sm font-bold">Program dan Kegiatan Lainnya</p>
+                <ion-icon name="arrow-forward"></ion-icon>
+            </a>
+        </div>
+    </div>
+    <!-- toogle menu end -->
+    
+    <!-- ionicon script -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./src/js/main.js"></script>
+</body>
+</html>
